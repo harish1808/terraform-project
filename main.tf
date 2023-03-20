@@ -10,7 +10,7 @@ resource "aws_instance" "one" {
   instance_type   = "t2.micro"
   key_name        = "shiva3"
   vpc_security_group_ids = [aws_security_group.three.id]
-  availability_zone = "ap-northeast-1"
+  availability_zone = "ap-northeast-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -29,7 +29,7 @@ resource "aws_instance" "two" {
   instance_type   = "t2.micro"
   key_name        = "shiva3"
   vpc_security_group_ids = [aws_security_group.three.id]
-  availability_zone = "ap-northeast-1"
+  availability_zone = "ap-northeast-1c"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -76,7 +76,7 @@ name = "harish22"
 }
 
 resource "aws_ebs_volume" "six" {
- availability_zone = "ap-northeast-1"
+ availability_zone = "ap-northeast-1c"
   size = 40
   tags = {
     Name = "ebs-001"
