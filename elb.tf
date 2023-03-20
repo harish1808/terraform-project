@@ -1,6 +1,6 @@
 resource "aws_elb" "bar" {
   name               = "raham-terraform-elb"
-  availability_zones = ["ap-south-1a", "ap-south-1b"]
+  availability_zones = ["ap-northeast-1", "ap-northeast-1"]
 
   listener {
     instance_port     = 80
